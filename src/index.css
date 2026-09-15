@@ -1,3 +1,37 @@
+@import "tailwindcss";
+
+/* Design tokens for the Tailwind utility layer. Mirrors src/lib/theme.js,
+   kept here as plain hex because Tailwind v4's @theme is CSS, not JS; the
+   legacy `.lm-*` CSS variables (still used by most of App.jsx pending the
+   screen-by-screen rewrite) are generated separately from theme.js inside
+   App.jsx's GlobalStyle. Keep both in sync with theme.js by hand until the
+   rewrite is complete and one of the two systems is retired. */
+@theme {
+  --color-bg: #F7F6F2;
+  --color-panel: #FFFFFF;
+  --color-panel-alt: #EFEDE6;
+  --color-ink: #181B22;
+  --color-ink-soft: #5B5F68;
+  --color-navy: #1F2E4A;
+  --color-navy-deep: #131C2E;
+  --color-brass: #AD7F33;
+  --color-brass-soft: #E9DAB8;
+  --color-brass-strong: #C79341;
+  --color-green: #2C7A55;
+  --color-green-soft: #E3F0E9;
+  --color-red: #B23A34;
+  --color-red-soft: #F6E4E2;
+  --color-border: #DEDACD;
+  --color-paper: #F1EEE4;
+
+  --font-display: 'Spectral', Georgia, serif;
+  --font-body: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'IBM Plex Mono', 'SF Mono', monospace;
+
+  --ease-lm-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-lm-back: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
 :root {
   color-scheme: light;
 }
